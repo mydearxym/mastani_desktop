@@ -13,16 +13,16 @@ app.on('ready', async () => {
 
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
   })
 
   const url = isDev
     ? 'http://localhost:8000/start'
     : format({
-      pathname: join(__dirname, '../renderer/start/index.html'),
-      protocol: 'file:',
-      slashes: true
-    })
+        pathname: join(__dirname, '../renderer/start/index.html'),
+        protocol: 'file:',
+        slashes: true,
+      })
 
   mainWindow.loadURL(url)
 })
